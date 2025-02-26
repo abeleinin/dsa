@@ -2,7 +2,7 @@
 
 - [Advantages](#advantages)
 - [Disadvantages](#disadvantages)
-- [Mindful During Interview](#mindful-during-interview)
+- [Questions](#mindful-during-interview)
 - [Corner Cases](#corner-cases)
 - [Techniques](#techniques)
 - [Neetcode 150 Questions](#neetcode-150-questions)
@@ -29,11 +29,10 @@ Insert (at the end) | O(1) | Append to the end of an array doesn't shift any ele
 Remove | O(n) | Removal would require shifting subsequent elements by one position to the left
 Remove (at the end) | O(1) | Drop element doesn't require shifting any elements 
 
-## Mindful During Interview
+## Questions
 
-- Clarify if there are duplicate values in the array. 
-- When using an index to iterate through array elements, be careful not to go out of bounds. 
-- Use start and end indices to demarcate a subarray/range where possible
+- Duplicate values in the array. 
+- Bounds checking (Off-by-one errors)
 
 ## Corner Cases
 
