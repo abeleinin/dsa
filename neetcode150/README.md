@@ -7,9 +7,9 @@
 | Difficulty | C++
 |------------|-------------------
 | Easy       | 18
-| Medium     | 35
+| Medium     | 36
 | Hard       | 4 
-| Total      | 57 / 150
+| Total      | 58 / 150
 
 ## Topics
 
@@ -119,7 +119,7 @@
 ### Graphs
 | Status             |Problem  | Difficulty | Code
 |--------------------|---------|------------|-----
-| :heavy_check_mark: | [Number of Islands](https://leetcode.com/problems/number-of-islands) | Medium | 
+| :heavy_check_mark: | [Number of Islands](https://leetcode.com/problems/number-of-islands) | Medium | [cpp](./medium/200-Number-of-Islands.cpp)
 | :heavy_check_mark: | [Clone Graph](https://leetcode.com/problems/clone-graph/) | Medium | [cpp](./medium/cpp/133-Clone-Graph.cpp)
 | :heavy_check_mark: | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) | Medium | [cpp](./medium/cpp/417-Pacific-Atlantic-Water-Flow.cpp)
 | :heavy_check_mark: | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | Medium | 
