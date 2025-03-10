@@ -28,8 +28,9 @@ public:
 
                 // Depth first search
                 vector<pair<int, int>> q = {{i, j}};
+                int x, y;
                 while (!q.empty()) {
-                    auto [x, y] = q.back();
+                    tie(x, y) = q.back();
                     q.pop_back();
 
                     grid[x][y] = '0';
