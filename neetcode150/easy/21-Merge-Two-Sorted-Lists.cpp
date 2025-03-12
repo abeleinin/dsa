@@ -12,58 +12,62 @@ struct ListNode {
 };
  
 /**
- * \c Solution1
+ * \c RecursiveSolution
  * 
- * Recursive
+ * 1. Check for the null case for both of the input lists
+ * 2. Determine which values is smaller and make its next node 
+ *    point to the recursive call
+ * 3. Return the smaller list (intuitively just think of this as the
+ *    first smaller node during the first pass of the function)
  * 
  * Time  : O(n+m)
  * Space : O(n+m)
  */
-class Solution1 {
+class RecursiveSolution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        if (list1 == nullptr) {
-            return list2;
-        }
-        if (list2 == nullptr) {
-            return list1;
-        }
+        if (!list1) return list2;
+        if (!list2) return list1;
+        
         if (list1->val < list2->val) {
             list1->next = mergeTwoLists(list1->next, list2);
             return list1;
-        } else {
-            list2->next = mergeTwoLists(list1, list2->next);
-            return list2;
         }
+
+        list2->next = mergeTwoLists(list1, list2->next);
+        return list2;
     }
 };
 
 /**
- * \c Solution2
+ * \c IterativeSolution
  * 
- * Iterative
+ * 1. Check for the null case for both of the input lists
+ * 2. Determine the initial smaller value and create a pointer to it (head)
+ * 3. Process the lists while both are not empty
+ * 4. If a list still contains nodes, we know the remaining values are all 
+ *    greater than our merged list, so we can simply point to the entire 
+ *    list at the end
  * 
  * Time  : O(n+m)
  * Space : O(1)
  */
-class Solution2 {
+class IterativeSolution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        if (list1 == nullptr) {
-            return list2;
-        } else if (list2 == nullptr) {
-            return list1;
-        }
-
-        ListNode* curr = list1;
-        if (list1->val > list2->val) {
+        if (!list1) return list2;
+        if (!list2) return list1;
+            
+        ListNode* curr;
+        if(list1->val < list2->val) {
+            curr = list1;
+            list1 = list1->next;
+        } else {
             curr = list2;
             list2 = list2->next;
-        } else {
-            list1 = list1->next;
         }
-        ListNode* ptr = curr;
-
+        ListNode* head = curr;
+    
         while (list1 && list2) {
             if (list1->val < list2->val) {
                 curr->next = list1;
@@ -74,12 +78,10 @@ public:
             }
             curr = curr->next;
         }
-
-        if (list1 == nullptr) {
-            curr->next = list2;
-        } else {
-            curr->next = list1;
-        }
-        return ptr;
+    
+        if (list1) curr->next = list1;
+        if (list2) curr->next = list2;
+    
+        return head;
     }
 };
