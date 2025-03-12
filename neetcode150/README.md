@@ -7,9 +7,9 @@
 | Difficulty | C++
 |------------|-------------------
 | Easy       | 18
-| Medium     | 36
+| Medium     | 37
 | Hard       | 4 
-| Total      | 58 / 150
+| Total      | 59 / 150
 
 ## Topics
 
@@ -92,7 +92,7 @@
 | :white_large_square: | Lowest Common Ancestor of a BST | Medium
 | :heavy_check_mark: | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium | 
 | :heavy_check_mark: | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view) | Medium | 
-| :heavy_check_mark: | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Medium | 
+| :heavy_check_mark: | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Medium | [cpp](./medium/98-Validate-Binary-Search-Tree.cpp)
 | :heavy_check_mark: | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | Medium | 
 | :heavy_check_mark: | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Medium | 
 
