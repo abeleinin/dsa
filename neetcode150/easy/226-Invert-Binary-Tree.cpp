@@ -1,4 +1,7 @@
 #include <algorithm>
+#include <queue>
+
+using namespace std;
 
 // Definition for a binary tree node.
 struct TreeNode {
@@ -10,15 +13,35 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-class Solution {
+class Solution1 {
 public:
     TreeNode* invertTree(TreeNode* root) {
         if (root == NULL) {
             return NULL;
         }
-        std::swap(root->right, root->left);
+        swap(root->right, root->left);
         invertTree(root->left);
         invertTree(root->right);
         return root;
     }
 };
+
+class Solution2 {
+    public:
+        TreeNode* invertTree(TreeNode* root) {
+            queue<TreeNode*> q;
+            q.push(root);
+            while (!q.empty()) {
+                TreeNode* curr = q.front();
+                q.pop();
+    
+                if (curr) {
+                    swap(curr->left, curr->right);
+    
+                    q.push(curr->left);
+                    q.push(curr->right);
+                }
+            }
+            return root;
+        }
+    };
