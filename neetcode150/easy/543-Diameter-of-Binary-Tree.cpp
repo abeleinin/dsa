@@ -17,7 +17,7 @@ struct TreeNode {
  * 
  * 1. Use dfs
  * 2. Maintain a global maxDiameter
- * 3. The current depth is the depth of the left and right j
+ * 3. The current depth is the depth of the left and right
  * 4. return max(left, right) + 1, to compute the diameter through a node
  * 
  * Time  : O(n)
