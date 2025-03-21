@@ -10,24 +10,32 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+/**
+ * \c Solution
+ * 
+ * 1. Create isSametree helper function (leetcode 100)
+ * 2. Use early return if the trees are the same
+ * 3. Otherwise, check if the left or right children of root are the same as the subRoot
+ * 
+ * Time  : O(mn)
+ * Space : O(height of root)
+ */
 class Solution {
 public:
-    bool isSameTree(TreeNode* t1, TreeNode* t2) {
-        if (t1 == NULL && t2 == NULL) {
-            return true;
-        } else if (t1 == NULL || t2 == NULL || t1->val != t2->val) {
-            return false;
-        } else {
-            return isSameTree(t1->left, t2->left) && isSameTree(t1->right, t2->right);
-        }
+    bool isSametree(TreeNode* t1, TreeNode* t2) {
+        if (!t1 || !t2) return !t1 && !t2;
+    
+        if (t1->val != t2->val) return false;
+    
+        return isSametree(t1->left, t2->left) && isSametree(t1->right, t2->right);
     }
+    
     bool isSubtree(TreeNode* root, TreeNode* subRoot) {
-        if (root == NULL && subRoot == NULL) {
-            return true;
-        }
-        if (root == NULL || subRoot == NULL) {
-            return false;
-        }
-        return isSubtree(root->right, subRoot) || isSubtree(root->left, subRoot) || isSameTree(root, subRoot);
+        if (!root) return false;
+    
+        // early return saves uneccassary recursive calls
+        if (isSametree(root, subRoot)) return true;
+    
+        return isSubtree(root->left, subRoot) || isSubtree(root->right, subRoot);
     }
 };
