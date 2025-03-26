@@ -1,5 +1,4 @@
-#ifndef LINKED_LIST_H
-#define LINKED_LIST_H
+#pragma once
 
 #include <cstddef>
 
@@ -51,7 +50,6 @@ private:
 
     Node<T>* tail;
 
-    size_t size;
+    size_t size = 0;
 };
 
-#endif // LINKED_LIST_H

@@ -1,5 +1,7 @@
 #include "linked_list.h"
 
+#include <iostream>
+
 template <typename T>
 Node<T>::Node(T value)
     : value(value)
@@ -20,13 +22,14 @@ LinkedList<T>::LinkedList(T value) {
 }
 
 template <typename T>
-LinkedList<T>::add(T value) {
+void LinkedList<T>::add(T value) {
     head->next = value;
     head = &value;
     ++size;
 }
 
-void LinkedList::print_list() const {
+template <typename T>
+void LinkedList<T>::print_list() const {
     if (size == 0) {
         std::cout << "nullptr" << std::endl;
     }
@@ -34,7 +37,7 @@ void LinkedList::print_list() const {
     std::cout << "{ " << head->value;
     for (int i = 1; i < size; ++i) {
         ++head;
-        std::cout << " -> " << head->value
+        std::cout << " -> " << head->value;
     }
     std::cout << " -> nullptr " << head->value;
 }

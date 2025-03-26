@@ -1,10 +1,8 @@
 #include <catch2/catch_test_macros.hpp>
 
-#include "vector.h"
+#include "linked_list.h"
 
-TEST_CASE("Vector Constructor")
+TEST_CASE("LinkedList Constructor")
 {
-    Vector<int> vec(10);
 
-    REQUIRE(vec.size() == 10);
 }
