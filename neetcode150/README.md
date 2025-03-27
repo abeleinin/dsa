@@ -7,9 +7,9 @@
 | Difficulty | C++
 |------------|-------------------
 | Easy       | 18
-| Medium     | 37
+| Medium     | 38
 | Hard       | 4 
-| Total      | 59 / 150
+| Total      | 60 / 150
 
 ## Topics
 
@@ -90,7 +90,7 @@
 | :heavy_check_mark: | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree) | Easy | [cpp](./easy/cpp/572-Subtree-of-Another-Tree.cpp)
 | :heavy_check_mark: | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Medium | 
 | :white_large_square: | Lowest Common Ancestor of a BST | Medium
-| :heavy_check_mark: | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium | 
+| :heavy_check_mark: | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium | [cpp](./medium/102-Binary-Tree-Level-Order-Traversal.cpp)
 | :heavy_check_mark: | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view) | Medium | 
 | :heavy_check_mark: | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Medium | [cpp](./medium/98-Validate-Binary-Search-Tree.cpp)
 | :heavy_check_mark: | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | Medium | 
