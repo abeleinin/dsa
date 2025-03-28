@@ -51,13 +51,17 @@ public:
       m_size++;
     }
 
-    void pop_back();
+    void pop_back() {
+      m_size--;
+    }
 
     void insert(size_t index, const T& value);
 
     void remove(size_t index);
 
-    void clear();
+    void clear() {
+      m_size = 0;
+    }
 
     void reserve(size_t new_capacity);
 
