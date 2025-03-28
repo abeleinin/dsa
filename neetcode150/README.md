@@ -7,9 +7,9 @@
 | Difficulty | C++
 |------------|-------------------
 | Easy       | 18
-| Medium     | 39
+| Medium     | 40
 | Hard       | 4 
-| Total      | 61 / 150
+| Total      | 62 / 150
 
 ## Topics
 
@@ -94,7 +94,7 @@
 | :heavy_check_mark: | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view) | Medium | [cpp](./medium/199-Binary-Tree-Right-Side-View.cpp)
 | :heavy_check_mark: | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Medium | [cpp](./medium/98-Validate-Binary-Search-Tree.cpp)
 | :heavy_check_mark: | [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/) | Medium | 
-| :heavy_check_mark: | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Medium | 
+| :heavy_check_mark: | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Medium | [cpp](./medium/230-Kth-Smallest-Element-In-a-Bst.cpp)
 
 ### Tries
 | Status             |Problem  | Difficulty | Code
