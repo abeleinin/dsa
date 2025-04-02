@@ -131,7 +131,7 @@
 | Status             |Problem  | Difficulty | Code
 |--------------------|---------|------------|-----
 | :heavy_check_mark: | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs) | Easy | [cpp](./easy/cpp/70-Climbing-Stairs.cpp)
-| :heavy_check_mark: | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs) | Easy | 
+| :heavy_check_mark: | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs) | Easy |  [cpp](./easy/746-Min-Cost-Climbing-Stairs.cpp)
 | :heavy_check_mark: | [House Robber](https://leetcode.com/problems/house-robber) | Medium | 
 | :heavy_check_mark: | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Medium | [cpp](./medium/cpp/5-Longest-Palindromic-Substring.cpp) 
 
