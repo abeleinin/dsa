@@ -1,7 +1,7 @@
-#ifndef VECTOR_H
-#define VECTOR_H
+#pragma once
 
 #include <cstddef>
+#include <iostream>
 
 template <typename T>
 class Vector {
@@ -63,11 +63,21 @@ public:
       m_size = 0;
     }
 
-    void reserve(size_t new_capacity);
+    void reserve(size_t new_capacity) {
+      m_capacity = new_capacity;
+    }
 
     void shrink_to_fit();
 
-    void print() const;
+    void print() const {
+      std::cout << "[";
+      for (int i = 0; i < m_size; ++i) {
+        std::cout << to_string(m_data[i]);
+        if (i != m_size - 1)
+          std::cout << ", ";
+      }
+      std::cout << "]" << std::endl;
+    }
   
 private:
   T* m_data;
@@ -76,5 +86,3 @@ private:
   
   int m_capacity;
 };
-
-#endif // VECTOR_H
