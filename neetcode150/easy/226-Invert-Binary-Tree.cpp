@@ -16,7 +16,6 @@ struct TreeNode {
 /**
  * \c ResursiveSolution
  * 
- * Recursive solution
  * 1. Swap left and right nodes
  * 2. Invert left and right sides
  * 
@@ -39,7 +38,6 @@ public:
 /**
  * \c IterativeSolution
  * 
- * Iterative solution
  * 1. Use a queue (FIFO) and push the root
  * 2. While the queue is not empty pop the front node and swap its left and right children
  * 3. Push the children (left and right) onto the queue
