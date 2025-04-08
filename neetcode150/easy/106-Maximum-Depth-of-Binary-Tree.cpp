@@ -16,7 +16,7 @@ struct TreeNode {
 /**
  * \c RecursiveSolution
  * 
- * 1. Use tail recursion to accumulate the depth of the left and right branches
+ * 1. Use binary recursion to accumulate the depth of the left and right branches
  * 2. Return the max of either side
  * 
  * Time  : O(n)
