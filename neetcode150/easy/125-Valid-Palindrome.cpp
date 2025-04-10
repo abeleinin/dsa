@@ -3,45 +3,15 @@
 using namespace std;
 
 /**
- * \c Solution1
+ * \c Solution
  * 
- * 1. Check base cases (ie size == 0 || size == 1)
- * 2. Create "clean" string without non-alphanumeric characters and uses lowercase character (ie isalnum and tolower utils)
- * 3. Use two-pointer technique to compare beginning and end characters
- */
-class Solution1 {
-public:
-    bool isPalindrome(string s) {
-        if(s.size() == 1){
-            return true;
-        }
-        
-        string clean = "";
-        for(char c : s){
-            if(isalnum(c)){
-                clean += tolower(c);
-            }
-        }
-        
-        int i = 0;
-        int j = clean.size() - 1;
-        while(i < j){
-            if(clean[i] != clean[j]){
-                return false;
-            }
-            i++;
-            j--;
-        }
-        return true;
-    }
-};
-
-/**
- * \c Solution2
+ * 1. Use two-pointer technique to compare beginning and end characters
+ * 2. Skip characters that are not isalnum() and compare the tolower() characters
  * 
- * Similar to \c Solution1 but doesn't use auxiliary "clean" string, saving space.
+ * Time  : O(n)
+ * Space : O(1)
  */
-class Solution2 {
+class Solution {
 public:
     bool isPalindrome(string s) {
         if (s.size() == 0 || s.size() == 1) {
@@ -50,7 +20,7 @@ public:
         
         int i = 0;
         int j = s.size()-1;
-        while(i < j) {
+        while (i < j) {
             if (!isalnum(s[i])) {
                 ++i;
                 continue;
