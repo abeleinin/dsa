@@ -9,8 +9,8 @@ using namespace std;
  * 1. Push open parens to stack
  * 2. On closed paren check if stack.top is the open paren
  * 
- * Time  : O(N)
- * Space : O(N)
+ * Time  : O(n)
+ * Space : O(n)
  */
 class Solution {
 public:
