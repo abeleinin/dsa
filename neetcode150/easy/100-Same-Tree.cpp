@@ -11,22 +11,28 @@ struct TreeNode {
 };
 
 /**
- * \c Solution1
+ * \c SimpleSolution
+ * 
+ * 1. Use dfs
+ * 2. Define a base case for null TreeNodes
+ * 3. Compare the node values of each tree
+ * 4. Search the children branches
+ * 5. Both the left and the right sub-trees must be the same so use &&
+ * 
+ * Time  : O(n)
+ * Space : O(n)
  */
-class Solution1 {
+class SimpleSolution {
 public:
     bool dfs(TreeNode* p, TreeNode* q) {
-        if (p == NULL && q == NULL) {
-            return true;
-        } 
-        if (p == NULL || q == NULL) {
-            return false;
-        }
-        if (p->val != q->val) {
-            return false;
-        }
+        if (!p) return !q;
+        if (!q) return !p;
+
+        if (p->val != q->val) return false;
+
         bool left = dfs(p->left, q->left);
         bool right = dfs(p->right, q->right);
+
         return left && right;
     }
 
@@ -36,18 +42,19 @@ public:
 };
 
 /**
- * \c Solution2
+ * \c CleanSolution
+ * 
+ * Simplifies base case and recursive call
+ * 
+ * Time  : O(n)
+ * Space : O(n)
  */
-class Solution2 {
+class CleanSolution {
 public:
     bool dfs(TreeNode* p, TreeNode* q) {
-        if (!p) return !q;
+        if (!p || !q) return !p && !q;
 
-        if (!q) return !p;
-
-        if (p->val != q->val) {
-          return false;
-        }
+        if (p->val != q->val) return false;
 
         return dfs(p->left, q->left) && dfs(p->right, q->right);
     }
