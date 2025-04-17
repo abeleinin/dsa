@@ -25,7 +25,7 @@ struct TreeNode {
 class RecursiveSolution {
 public:
     int maxDepth(TreeNode* root) {
-        if (root == NULL) {
+        if (!root) {
             return 0;
         }
         int valLeft = 1 + maxDepth(root->left);
