@@ -20,8 +20,8 @@ struct TreeNode {
  * 3. The current depth is the depth of the left and right j
  * 4. return max(left, right) + 1, to compute the diameter through a node
  * 
- * Time  : O()
- * Space : O()
+ * Time  : O(n)
+ * Space : O(height)
  */
 class Solution {
 public:
