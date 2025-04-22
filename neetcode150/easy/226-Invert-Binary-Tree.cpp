@@ -25,12 +25,12 @@ struct TreeNode {
 class ResursiveSolution {
 public:
     TreeNode* invertTree(TreeNode* root) {
-        if (root == NULL) {
-            return NULL;
-        }
+        if (!root) return root;
+
         swap(root->right, root->left);
         invertTree(root->left);
         invertTree(root->right);
+
         return root;
     }
 };
