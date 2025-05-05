@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 
 # Project name
-project(MyProject)
+project(data_structures LANGUAGES CXX)
 
 # Set the C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -14,24 +14,25 @@ set(TEST_DIR ${CMAKE_SOURCE_DIR}/tests)
 
 # Include the header files directory
 include_directories(${INCLUDE_DIR})
-
-# Find Catch2 for testing
-find_package(Catch2 3 REQUIRED)
+include_directories(/opt/homebrew/include/)
 
 # Gather source files for testing
 file(GLOB SRC_FILES "${SRC_DIR}/*.cc")
 file(GLOB TEST_FILES "${TEST_DIR}/*.cc")
 
-# Combine source and test files
-set(TEST_SOURCES ${SRC_FILES} ${TEST_FILES})
+add_library(src_obj OBJECT ${SRC_DIR})
+
+# Find Catch2 for testing
+find_package(Catch2 3 REQUIRED)
 
 # Add a testing target
-add_executable(${PROJECT_NAME}_tests ${TEST_SOURCES})
+add_executable(test_vector ${TEST_DIR}/test_vector.cc)
+add_executable(test_linked_list ${TEST_DIR}/test_linked_list.cc)
 
 # Link Catch2 with the test executable
-target_link_libraries(${PROJECT_NAME}_tests PRIVATE Catch2::Catch2)
+target_link_libraries(test_vector PRIVATE src_obj Catch2::Catch2WithMain)
+target_link_libraries(test_linked_list PRIVATE src_obj Catch2::Catch2WithMain)
 
-# Enable testing with Catch2
-include(CTest)
-include(Catch)
-catch_discover_tests(${PROJECT_NAME}_tests)
+enable_testing()
+add_test(NAME TestVector COMMAND test_vector)
+add_test(NAME TestLinkedList COMMAND test_linked_list)
