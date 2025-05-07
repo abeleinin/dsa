@@ -13,7 +13,17 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-class Solution1 {
+/**
+ * \c ResursiveSolution
+ * 
+ * Recursive solution
+ * 1. Swap left and right nodes
+ * 2. Invert left and right sides
+ * 
+ * Time  : O(n)
+ * Space : O(height)
+ */
+class ResursiveSolution {
 public:
     TreeNode* invertTree(TreeNode* root) {
         if (root == NULL) {
@@ -26,22 +36,33 @@ public:
     }
 };
 
-class Solution2 {
-    public:
-        TreeNode* invertTree(TreeNode* root) {
-            queue<TreeNode*> q;
-            q.push(root);
-            while (!q.empty()) {
-                TreeNode* curr = q.front();
-                q.pop();
+/**
+ * \c IterativeSolution
+ * 
+ * Iterative solution
+ * 1. Use a queue (FIFO) and push the root
+ * 2. While the queue is not empty pop the front node and swap its left and right children
+ * 3. Push the children (left and right) onto the queue
+ * 
+ * Time  : O(n)
+ * Space : O(height)
+ */
+class IterativeSolution {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        queue<TreeNode*> q;
+        q.push(root);
+        while (!q.empty()) {
+            TreeNode* curr = q.front();
+            q.pop();
     
-                if (curr) {
-                    swap(curr->left, curr->right);
+            if (curr) {
+                swap(curr->left, curr->right);
     
-                    q.push(curr->left);
-                    q.push(curr->right);
-                }
+                q.push(curr->left);
+                q.push(curr->right);
             }
-            return root;
         }
-    };
+        return root;
+    }
+};
