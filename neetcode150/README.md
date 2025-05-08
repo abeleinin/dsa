@@ -105,8 +105,8 @@
 ### Heap / Priority Queue
 | Status             |Problem  | Difficulty | Code
 |--------------------|---------|------------|-----
-| :white_large_square: | Kth Largest Element in a Stream | Easy 
-| :white_large_square: | Last Stone Weight | Easy 
+| :heavy_check_mark: | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | Easy | [cpp](./easy/703-Kth-Largest%20Element-in-a-Stream.cpp)
+| :white_large_square: | Last Stone Weight | Easy | 
 
 ### Backtracking
 | Status             |Problem  | Difficulty | Code
