@@ -158,7 +158,7 @@
 | Status             |Problem  | Difficulty | Code
 |--------------------|---------|------------|-----
 | :heavy_check_mark: | [Rotate Image](https://leetcode.com/problems/rotate-image/) | Medium | [cpp](./medium/cpp/48-Rotate-Image.cpp)
-| :white_large_square: | Happy Number | Easy 
+| :heavy_check_mark: | [Happy Number](https://leetcode.com/problems/happy-number/) | Easy | [cpp](./easy/202-Happy-Number.cpp)
 | :heavy_check_mark: | [Plus One](https://leetcode.com/problems/plus-one/) | Easy | [cpp](./easy/66-Plus-One.cpp)
 | :heavy_check_mark: | [Set Matrix Zeros](https://leetcode.com/problems/set-matrix-zeroes/) | Medium | 
 
