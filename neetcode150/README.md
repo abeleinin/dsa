@@ -159,7 +159,7 @@
 |--------------------|---------|------------|-----
 | :heavy_check_mark: | [Rotate Image](https://leetcode.com/problems/rotate-image/) | Medium | [cpp](./medium/cpp/48-Rotate-Image.cpp)
 | :white_large_square: | Happy Number | Easy 
-| :white_large_square: | Plus One | Easy 
+| :heavy_check_mark: | [Plus One](https://leetcode.com/problems/plus-one/) | Easy | [cpp](./easy/66-Plus-One.cpp)
 | :heavy_check_mark: | [Set Matrix Zeros](https://leetcode.com/problems/set-matrix-zeroes/) | Medium | 
 
 ### Bit Manipulation
