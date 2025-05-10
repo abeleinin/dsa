@@ -168,4 +168,5 @@
 | :heavy_check_mark: | [Single Number](https://leetcode.com/problems/single-number/) | Easy | [cpp](./easy/cpp/136-Single-Number.cpp)
 | :heavy_check_mark: | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy | [cpp](./easy/191-Number-of-1-Bits.cpp)
 | :heavy_check_mark: | [Counting Bits](https://leetcode.com/problems/counting-bits/) | Easy | [cpp](./easy/338-Counting-Bits.cpp)
+| :heavy_check_mark: | [Reverse Bits](https://leetcode.com/problems/reverse-bits/) | Easy | [cpp](./easy/190-Reverse-Bits.cpp)
 | :heavy_check_mark: | [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | Medium | [cpp](./medium/cpp/371-Sum-of-Two-Integers.cpp)
