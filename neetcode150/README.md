@@ -150,6 +150,7 @@
 ### Intervals
 | Status             |Problem  | Difficulty | Code
 |--------------------|---------|------------|-----
+| :heavy_check_mark: | [Meeting Rooms](https://neetcode.io/problems/meeting-schedule) | Easy | [cpp](./easy/252-Meeting-Rooms.cpp)
 | :heavy_check_mark: | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium | 
 | :heavy_check_mark: | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Medium | 
 | :heavy_check_mark: | [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | Medium | [cpp](./medium/cpp/435-Non-Overlapping-Intervals.cpp)
