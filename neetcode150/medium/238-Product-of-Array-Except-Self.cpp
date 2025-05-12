@@ -2,24 +2,36 @@
 
 using namespace std;
 
-// O(1) extra space solution (The output array does not count as extra space for space complexity analysis).
+/**
+ * \c Solution
+ * 
+ * 1. Perform prefix product of the values from 1 to n-1 and set n to that value
+ * 2. Perform a suffix product of the values from i+1 to n and multiply that with n
+ * 
+ * Time  : O(n)
+ * Space : O(1)
+ * (output array doesn't count as extra space)
+ */
 class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
-        int N = nums.size();
-        vector<int> out(N);
-        
-        int t = 1;
-        for (int i = 0; i < N; i++){
-            out[i] = t;
-            t *= nums[i];
+        int n = nums.size();
+        vector<int> output(n);
+    
+        // Prefix sum
+        int curr = 1;
+        for (int i = 0; i < n; i++) {
+            output[i] = curr;
+            curr *= nums[i];
         }
-
-        t = 1;
-        for (int i = N-1; i >= 0; i--){
-            out[i] *= t;
-            t *= nums[i];
+    
+        // Suffix sum
+        curr = 1;
+        for (int i = n-1; i > -1; i--) {
+            output[i] *= curr;
+            curr *= nums[i];
         }
-        return out;
+    
+        return output;
     }
 };
