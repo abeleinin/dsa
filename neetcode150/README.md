@@ -6,10 +6,10 @@
 
 | Difficulty | C++
 |------------|-------------------
-| Easy       | 18
-| Medium     | 41
-| Hard       | 4 
-| Total      | 63 / 150
+| Easy       | 28 / 28
+| Medium     | 42 / 101
+| Hard       |  4 / 21
+| Total      | 73 / 150
 
 ## Topics
 
