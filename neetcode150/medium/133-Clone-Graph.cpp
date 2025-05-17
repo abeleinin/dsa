@@ -1,5 +1,6 @@
 #include <vector>
-#include <map>
+#include <queue>
+#include <unordered_map>
 
 using namespace std;
 
@@ -22,35 +23,40 @@ public:
     }
 };
 
-void dfs(Node* copy, const vector<Node*>& nodes, map<Node*,Node*>& h) {
-    if (nodes.empty()) return;
-
-    Node* curr;
-    for (int i = 0; i < nodes.size(); i++) {
-        auto it = h.find(nodes[i]);
-        if (it == h.end()) {
-            Node* root = new Node(nodes[i]->val);
-            h[nodes[i]] = root;
-            copy->neighbors.push_back(root);
-            if (!nodes[i]->neighbors.empty()) {
-                dfs(root, nodes[i]->neighbors, h);
-            }
-        } else {
-            copy->neighbors.push_back(it->second);
-        }
-    }
-    return;
-}
-
-class Solution {
+/**
+ * \c IterativeBfsSolution
+ * 
+ * 1. Create a visited map from the old node to new node
+ * 2. Use iterative BFS to traverse the graph checking if the neighbors have been visited
+ * 3. Push all old neighbor nodes into the current nodes neighbor vector
+ * 
+ * Time  : O(|v|+|e|)
+ * Space : O(|v|+|e|)
+ */
+class IterativeBfsSolution {
 public:
     Node* cloneGraph(Node* node) {
-        if (node) {
-            Node* root = new Node(node->val);
-            map<Node*,Node*> h = {{node, root}};
-            dfs(root, node->neighbors, h);
-            return root;
+        if (!node) return nullptr;
+    
+        unordered_map<Node*, Node*> visit;
+        queue<Node*> q;
+    
+        visit[node] = new Node(node->val);
+        q.push(node);
+    
+        while (!q.empty()) {
+            auto curr = q.front(); 
+            q.pop();
+    
+            for (Node* n : curr->neighbors) {
+                if (visit.find(n) == visit.end()) {
+                    visit[n] = new Node(n->val);
+                    q.push(n);
+                }
+                visit[curr]->neighbors.push_back(visit[n]);
+            }
         }
-        return nullptr;
+    
+        return visit[node];
     }
 };
