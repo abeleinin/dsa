@@ -12,6 +12,7 @@ The language you use for these problems should be job-specific. Most people just
 
 - [Data Structures](#data-structures)
 - [Algorithms](#algorithms)
+- [Resources](#resources)
 
 ## Data Structures
 
@@ -76,3 +77,8 @@ The [neetcode150](./neetcode150/) folder contains my solutions to Neetcode 150 i
 | [Interval](./topics/intervals.md)
 | Math & Geometry
 | Bit Manipulation
+
+## Resources
+
+- [Open Data Structures (in C++)](https://opendatastructures.org/ods-cpp/)
+
